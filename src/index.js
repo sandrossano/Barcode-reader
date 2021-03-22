@@ -162,7 +162,7 @@ class App extends Component {
       var url =
         "https://cors-casillo-sap.herokuapp.com/https://sap.casillogroup.it:1080/sap/opu/odata/sap/ZWEB_ALLEGATI_SRV/ddtAllegatiSet";
       var body =
-        '<entry xml:base="/sap/opu/odata/sap/ZWEB_USERS_SRV/" xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" ' +
+        '<entry xml:base="/sap/opu/odata/sap/ZWEB_ALLEGATI_SRV/" xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" ' +
         'xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">' +
         ' <content type="application/xml">' +
         "<m:properties>" +
