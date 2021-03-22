@@ -185,7 +185,8 @@ class App extends Component {
       //Send the proper header information along with the request
       http.setRequestHeader("Content-type", "application/xml");
       http.setRequestHeader("X-Requested-With", "X");
-      http.setRequestHeader("Authorization", "Basic c3NpaTpsaW1waW8=");
+      // PRD: Basic c3NpaTpsaW1waW8=
+      http.setRequestHeader("Authorization", "Basic c3NpaTpaZXVzQDIwMjEh");
 
       http.onreadystatechange = function () {
         //Call a function when the state changes.
