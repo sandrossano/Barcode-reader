@@ -109,11 +109,11 @@ class App extends Component {
               result.codeResult.code;
             console.log("result", result.codeResult.code);
           } else {
-            swal("not detected");
+            swal("Internal Error!", "Not detected", "error");
             document.querySelector("#text-input").value = "";
           }
         } else {
-          swal("not detected");
+          swal("Internal Error!", "Not detected", "error");
           document.querySelector("#text-input").value = "";
         }
       }
@@ -130,7 +130,7 @@ class App extends Component {
     //loaderHandler.showLoader("Caricamento in corso"); // Show indicator with message 'Loading More'
     this._changeEnabled("disabled");
     if (filename === "") {
-      swal("Selezionare una immagine");
+      swal("Errore!", "Selezionare una immagine", "error");
       this._changeEnabled("enabled");
       return;
     }
@@ -197,13 +197,17 @@ class App extends Component {
         ) {
           s3.putObject(params, function (err, data) {
             if (err) {
-              swal("Errore nel caricamento del file");
+              swal("Errore!", "Errore nel caricamento del file", "error");
               console.log(err);
               that._changeEnabled("enabled");
               // loaderHandler.hideLoader(); // Hide the loader
               that.setState({ allegatiload: false });
             } else {
-              swal("File caricato con successo");
+              swal(
+                "Upload Completato!",
+                "File Caricato con successo",
+                "success"
+              );
               console.log("Successfully uploaded data to repodoc/" + myKey);
               that._changeEnabled("enabled");
               // loaderHandler.hideLoader(); // Hide the loader
