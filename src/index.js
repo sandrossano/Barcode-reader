@@ -7,6 +7,7 @@ import Result from "./components/Result";
 import Scanner from "./components/Scanner";
 import css from "./styles.module.css";
 import Quagga from "quagga";
+import swal from "sweetalert";
 
 //import { RingLoader, BounceLoader, HashLoader } from "react-spinners";
 import ButtonLoader from "./ButtonLoader/index";
@@ -108,11 +109,11 @@ class App extends Component {
               result.codeResult.code;
             console.log("result", result.codeResult.code);
           } else {
-            alert("not detected");
+            swal("not detected");
             document.querySelector("#text-input").value = "";
           }
         } else {
-          alert("not detected");
+          swal("not detected");
           document.querySelector("#text-input").value = "";
         }
       }
@@ -129,7 +130,7 @@ class App extends Component {
     //loaderHandler.showLoader("Caricamento in corso"); // Show indicator with message 'Loading More'
     this._changeEnabled("disabled");
     if (filename === "") {
-      alert("Selezionare una immagine");
+      swal("Selezionare una immagine");
       this._changeEnabled("enabled");
       return;
     }
@@ -196,13 +197,13 @@ class App extends Component {
         ) {
           s3.putObject(params, function (err, data) {
             if (err) {
-              alert("Errore nel caricamento del file");
+              swal("Errore nel caricamento del file");
               console.log(err);
               that._changeEnabled("enabled");
               // loaderHandler.hideLoader(); // Hide the loader
               that.setState({ allegatiload: false });
             } else {
-              alert("File caricato con successo");
+              swal("File caricato con successo");
               console.log("Successfully uploaded data to repodoc/" + myKey);
               that._changeEnabled("enabled");
               // loaderHandler.hideLoader(); // Hide the loader
@@ -215,7 +216,7 @@ class App extends Component {
             http.readyState === 4 &&
             (http.status === 400 || http.status === 401)
           ) {
-            alert("Errore nel caricamento del file: Controllare Barcode");
+            swal("Errore nel caricamento del file: Controllare Barcode");
             console.log("Barcode errato");
             that._changeEnabled("enabled");
             // loaderHandler.hideLoader(); // Hide the loader
