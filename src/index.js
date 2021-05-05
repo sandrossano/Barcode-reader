@@ -336,7 +336,7 @@ class App extends Component {
         <div id="alleg" className={css.card} hidden="hidden">
           <fieldset id="fieldEn" className={css.fieldset}>
             <center>
-              <span className={css.TestoTestata}>Allegati:</span>
+              <span className={css.TestoTestata}>Lista Foto:</span>
 
               <div style={{ marginTop: "15px" }}>
                 <div className={css.card2}>
