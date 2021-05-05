@@ -2,7 +2,7 @@
   "inputStream": {
     "type": "LiveStream",
     "constraints": {
-      "width": { "min": 300, "max": 650 },
+      "width": { "min": 300, "max": 1000 },
       "height": { "min": 200, "max": 450 },
       "facingMode": "environment",
       "aspectRatio": { "min": 0, "max": 100 }

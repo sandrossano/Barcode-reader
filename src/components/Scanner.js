@@ -27,7 +27,7 @@ class Scanner extends Component {
       <div
         id="interactive"
         className="viewport"
-        style={{ minHeight: "200px", maxHeight: "650px" }}
+        style={{ minHeight: "200px", maxHeight: "450px" }}
       />
     );
   }
