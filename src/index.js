@@ -25,10 +25,11 @@ const styleLeft = {
 ///AWS CONFIG
 const AWS = require("aws-sdk");
 // Enter copied or downloaded access ID and secret key here
-const ID = "AKIARQNSLORAPDGPDBOG";
-const SECRET = "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";
+
+const ID = "AKIAQU5KSQSCAFLYTZFT"; //"AKIARQNSLORAPDGPDBOG";
+const SECRET = "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"; //"RJCnzm9RqW2Z+eJ7q8aVgTMNhvknllsVdfzPkIhC";
 // The name of the bucket that you have created
-const BUCKET_NAME = "repodoc";
+const BUCKET_NAME = "repodoc-casillo"; //"repodoc";
 const s3 = new AWS.S3({
   accessKeyId: ID,
   secretAccessKey: SECRET
@@ -161,13 +162,13 @@ class App extends Component {
 
       var http = new XMLHttpRequest();
       var url =
-        "https://cors-casillo-sap.herokuapp.com/https://sap.casillogroup.it:1080/sap/opu/odata/sap/ZWEB_ALLEGATI_SRV/ddtAllegatiSet";
+        "https://cors-casillo-sap.herokuapp.com/https://sap.casillogroup.it/sap/opu/odata/sap/ZWEB_ALLEGATI_SRV/ddtAllegatiSet";
       var body =
         '<entry xml:base="/sap/opu/odata/sap/ZWEB_ALLEGATI_SRV/" xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" ' +
         'xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">' +
         ' <content type="application/xml">' +
         "<m:properties>" +
-        "<d:LINK>https://repodoc.s3.eu-west-3.amazonaws.com/" +
+        "<d:LINK>https://repodoc-casillo.s3.eu-west-3.amazonaws.com/" +
         myKey +
         "</d:LINK>" +
         "<d:NOME_ALLEGATO>" +
@@ -187,7 +188,8 @@ class App extends Component {
       http.setRequestHeader("Content-type", "application/xml");
       http.setRequestHeader("X-Requested-With", "X");
       // PRD: Basic c3NpaTpsaW1waW8=
-      http.setRequestHeader("Authorization", "Basic c3NpaTpaZXVzQDIwMjEh");
+      // TST: Basic c3NpaTpaZXVzQDIwMjEh
+      http.setRequestHeader("Authorization", "Basic c3NpaTpsaW1waW8=");
 
       http.onreadystatechange = function () {
         //Call a function when the state changes.
@@ -246,7 +248,7 @@ class App extends Component {
     a.textContent = name;
     a.setAttribute(
       "href",
-      "https://repodoc.s3.eu-west-3.amazonaws.com/" + name
+      "https://repodoc-casillo.s3.eu-west-3.amazonaws.com/" + name
     );
     a.setAttribute("target", "_blank");
     li.appendChild(a);
