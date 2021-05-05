@@ -136,7 +136,7 @@ class App extends Component {
       return;
     }
     this.setState({ allegatiload: true });
-    var myBucket = "repodoc";
+    var myBucket = "repodoc-casillo";
     var namedoc = filename.split("fakepath\\");
     var myKey = document.querySelector("#text-input").value + "/" + namedoc[1];
 
@@ -210,7 +210,9 @@ class App extends Component {
                 "File Caricato con successo",
                 "success"
               );
-              console.log("Successfully uploaded data to repodoc/" + myKey);
+              console.log(
+                "Successfully uploaded data to repodoc-casillo/" + myKey
+              );
               that._changeEnabled("enabled");
               // loaderHandler.hideLoader(); // Hide the loader
               that.setState({ allegatiload: false });

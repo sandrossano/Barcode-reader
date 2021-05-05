@@ -13,7 +13,7 @@ export default class ButtonLoader extends Component {
     var that = this;
     var barcode = document.querySelector("#text-input").value;
     var url =
-      "https://cors-casillo-sap.herokuapp.com/https://repodoc.s3.eu-west-3.amazonaws.com/?prefix=" +
+      "https://cors-casillo-sap.herokuapp.com/https://repodoc-casillo.s3.eu-west-3.amazonaws.com/?prefix=" +
       barcode;
     if (barcode === "") {
       //alert("Il campo barcode non può essere vuoto");
@@ -77,7 +77,7 @@ export default class ButtonLoader extends Component {
     a.textContent = name;
     a.setAttribute(
       "href",
-      "https://repodoc.s3.eu-west-3.amazonaws.com/" + name
+      "https://repodoc-casillo.s3.eu-west-3.amazonaws.com/" + name
     );
     a.setAttribute("target", "_blank");
     li.appendChild(a);
