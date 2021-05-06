@@ -327,7 +327,8 @@ class App extends Component {
               type="number"
               placeholder="0123456789"
               id="text-input"
-              maxlength="10"
+              pattern="/^-?\d+\.?\d*$/"
+              onKeyPress="if(this.value.length==10) return false;"
               className={css.inputBarcode}
             />
           </div>
