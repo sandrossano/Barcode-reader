@@ -327,6 +327,7 @@ class App extends Component {
               type="number"
               placeholder="0123456789"
               id="text-input"
+              maxlength="10"
               className={css.inputBarcode}
             />
           </div>
