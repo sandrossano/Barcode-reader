@@ -60,7 +60,9 @@ class App extends Component {
     //this.setState({ results: this.state.results.concat([result]) })
     //this.setState({ results: this.state.results.concat([result]) });
     //this.setState({ results: [result] });
-    document.querySelector("#text-input").value = result.codeResult.code;
+    document.querySelector(
+      "#text-input"
+    ).value = result.codeResult.code.substring(0, 10);
     this.setState({ scanning: false });
   };
 
