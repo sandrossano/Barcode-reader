@@ -1,0 +1,45 @@
+{
+  "inputStream": {
+    "type": "LiveStream",
+    "constraints": {
+      "width": { "min": 300, "max": 650 },
+      "height": { "min": 200, "max": 450 },
+      "facingMode": "environment"
+    }
+  },
+  "locator": {
+    "patchSize": "medium",
+    "halfSample": true
+  },
+  "numOfWorkers": 2,
+  "frequency": 10,
+  "decoder": {
+    "readers": [
+      {
+        "format": "code_128_reader",
+        "config": {}
+      },
+      {
+        "format": "ean_reader",
+        "config": {}
+      },
+      {
+        "format": "code_39_reader",
+        "config": {}
+      },
+      {
+        "format": "code_39_vin_reader",
+        "config": {}
+      },
+      {
+        "format": "code_93_reader",
+        "config": {}
+      },
+      {
+        "format": "codabar_reader",
+        "config": {}
+      }
+    ]
+  },
+  "locate": true
+}
