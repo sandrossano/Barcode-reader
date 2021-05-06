@@ -18,26 +18,6 @@
       {
         "format": "code_128_reader",
         "config": {}
-      },
-      {
-        "format": "ean_reader",
-        "config": {}
-      },
-      {
-        "format": "code_39_reader",
-        "config": {}
-      },
-      {
-        "format": "code_39_vin_reader",
-        "config": {}
-      },
-      {
-        "format": "code_93_reader",
-        "config": {}
-      },
-      {
-        "format": "codabar_reader",
-        "config": {}
       }
     ]
   },
