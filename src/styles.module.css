@@ -82,21 +82,7 @@ input[name="file"] {
   margin: 4px 2px;
   cursor: pointer;
 }
-.buttonLoadFoto::before {
-  content: "Carica Foto";
-}
-.buttonLoadFoto {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
 spinnerTextStyle {
   color: "#FFF";
 }
@@ -188,4 +174,25 @@ padding {
 label {
   font-family: "72";
   color: #666;
+}
+
+.buttonLoadFoto {
+  background-color: #5496cd; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.buttonLoadFoto::before {
+  content: "Carica Foto";
+}
+
+.buttonLoadFoto:disabled {
+  opacity: 0.5;
 }
