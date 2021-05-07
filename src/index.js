@@ -364,7 +364,7 @@ class App extends Component {
                 <input
                   id="inputIdFile"
                   name="file"
-                  className={css.button}
+                  className={css.buttonLoadFoto}
                   type="file"
                   accept="image/*"
                 />

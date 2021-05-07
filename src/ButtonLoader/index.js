@@ -101,7 +101,7 @@ export default class ButtonLoader extends Component {
             />
           )}
           {loading && <span>Caricamento</span>}
-          {!loading && <span>Foto Cisterna</span>}
+          {!loading && <span>Abilita Foto</span>}
         </button>
         <p className={css.MessageFetch}>{this.state.data}</p>
       </div>
