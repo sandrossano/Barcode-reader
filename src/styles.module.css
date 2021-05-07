@@ -193,21 +193,25 @@ label {
   content: "Carica Foto";
   display: inline-block;
   background: linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
+  border: 1px solid #21212159;
   border-radius: 3px;
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #2b2a2a;
   font-weight: 700;
   font-size: 10pt;
+  color: white;
+  background-color: #536bb18c;
 }
 .buttonLoadFoto:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
-
+.buttonLoadFoto::-webkit-file-upload-button {
+  visibility: hidden;
+}
 .buttonLoadFoto:disabled {
   opacity: 0.5;
 }
