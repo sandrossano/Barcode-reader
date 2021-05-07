@@ -205,6 +205,7 @@ label {
   font-size: 10pt;
   color: white;
   background-color: #536bb18c;
+  margin-right: 10px;
 }
 .buttonLoadFoto:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
