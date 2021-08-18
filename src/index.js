@@ -160,6 +160,7 @@ class App extends Component {
         Bucket: myBucket,
         Key: myKey,
         Body: buf
+        //ContentType: 'image/jpeg'
       };
 
       var http = new XMLHttpRequest();
